@@ -6,22 +6,22 @@ An end-to-end machine learning project that predicts loan default risk and explo
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Business Problem](#business-problem)
-- [Objectives](#objectives)
-- [Dataset](#dataset)
-- [Features Used](#features-used)
-- [Project Workflow](#project-workflow)
-- [Models and Techniques](#models-and-techniques)
-- [Evaluation Results](#evaluation-results)
-- [Explainability with SHAP](#explainability-with-shap)
-- [Project Structure](#project-structure)
-- [Installation and Setup](#installation-and-setup)
-- [Running the Notebook](#running-the-notebook)
-- [Saved Artifacts](#saved-artifacts)
-- [Important Notes and Limitations](#important-notes-and-limitations)
-- [Future Improvements](#future-improvements)
-- [Technologies Used](#technologies-used)
+- [Overview]
+- [Business Problem]
+- [Objectives]
+- [Dataset]
+- [Features Used]
+- [Project Workflow]
+- [Models and Techniques]
+- [Evaluation Results]
+- [Explainability with SHAP]
+- [Project Structure]
+- [Installation and Setup]
+- [Running the Notebook]
+- [Saved Artifacts]
+- [Important Notes and Limitations]
+- [Future Improvements]
+- [Technologies Used]
 
 ## Overview
 
