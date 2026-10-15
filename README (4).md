@@ -124,7 +124,7 @@ flowchart TD
     N --> O
 ```
 
-> **Important:** This is a workflow overview, not proof that every stage is currently correct. The threshold-search formula and inconsistent use of tuned versus untuned XGBoost models are known issues described in [Saved Artifacts](#saved-artifacts). Fix and rerun those cells before relying on the threshold or final explanations.
+
 
 <details>
 <summary><strong>1. Data loading and exploratory data analysis (EDA) — Why?</strong></summary>
