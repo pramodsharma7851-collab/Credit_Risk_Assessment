@@ -323,111 +323,9 @@ credit-risk-assessment/
 └── .gitignore
 ```
 
-Do not commit sensitive data or generated model files unless there is a clear reason and it is safe and permitted to publish them. The notebook saves `credit_risk_model.pkl` and `best_threshold.pkl` when the relevant cells run; these can be regenerated.
 
-## Installation and Setup
 
-### 1. Clone the repository
 
-Replace `YOUR-USERNAME` with your GitHub username:
-
-```bash
-git clone https://github.com/YOUR-USERNAME/credit-risk-assessment.git
-cd credit-risk-assessment
-```
-
-### 2. Create a virtual environment (recommended)
-
-**Windows:**
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-```
-
-**macOS / Linux:**
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-### 3. Install dependencies
-
-Create a `requirements.txt` file with the following packages:
-
-```text
-numpy
-pandas
-matplotlib
-seaborn
-scikit-learn
-xgboost
-shap
-joblib
-jupyter
-ipykernel
-scipy
-```
-
-Then install them:
-
-```bash
-pip install -r requirements.txt
-```
-
-These are package names rather than a fully pinned, tested environment. For reproducible results, test the notebook and pin the exact working package versions in `requirements.txt`.
-
-### 4. Add the dataset
-
-Place `credit_risk_dataset.csv` in the same directory as the notebook, or update the CSV path in the data-loading cell. Make sure you have permission to use and redistribute the dataset.
-
-## Running the Notebook
-
-Start Jupyter:
-
-```bash
-jupyter notebook
-```
-
-Open `Credit_Risk.ipynb` and run the cells from top to bottom.
-
-The notebook includes package-installation commands for XGBoost and SHAP. If you use a local environment, install the dependencies first and remove or skip notebook-specific `!pip install` commands if they are unnecessary.
-
-## Saved Artifacts
-
-The notebook saves:
-
-- `credit_risk_model.pkl` — a sigmoid-calibrated model built from the tuned estimator.
-- `best_threshold.pkl` — a threshold value produced by the notebook's threshold-search section.
-
-**Important:** The current threshold-search cell has a formula error: it uses `2 * (precision - recall) / (precision + recall)` instead of the F1 formula `2 * precision * recall / (precision + recall)`. The recorded run selects a threshold of `1.00` and yields zero precision and recall for the default class in that threshold experiment. Fix the formula, use the tuned estimator consistently, and re-evaluate the threshold before relying on or deploying the saved threshold. The saved threshold in the current notebook should not be treated as validated.
-
-The notebook also uses the untuned `xg_model` in some probability/SHAP steps while other steps use the tuned estimator. Align these steps to the intended final model and rerun them before treating the artifacts and explanations as final.
-
-## Important Notes and Limitations
-
-- This is a portfolio project, not a production lending system.
-- The dataset's source, license, and provenance should be documented in the repository.
-- Cleaning rules should be justified with domain knowledge; unusual observations are not always invalid.
-- Model metrics depend on the dataset, split, class distribution, and threshold.
-- The classification threshold should reflect business costs and be selected without using the held-out test set for tuning.
-- Probability calibration should be assessed using suitable metrics and validation data.
-- Check for data leakage, stability over time, and performance on independent or out-of-time data.
-- Lending models require careful fairness, privacy, security, explainability, and regulatory review.
-- SHAP explanations describe model associations, not causation.
-- Do not use this model as the sole basis for real credit approval or rejection.
-
-## Future Improvements
-
-- Correct and validate the threshold optimization workflow.
-- Ensure evaluation, calibration, SHAP, and saved artifacts consistently use the selected tuned model.
-- Add precision-recall AUC, ROC-AUC on the held-out test set, calibration metrics, and threshold-specific confusion matrices.
-- Evaluate performance on an out-of-time test set and monitor for data drift.
-- Investigate fairness and error rates across relevant applicant subgroups, where legally and ethically appropriate.
-- Add automated tests and a reproducible training script.
-- Build a Streamlit application for input validation, risk estimates, and local explanations.
-- Add model versioning, logging, monitoring, and a documented retraining process.
 
 ## Technologies Used
 
@@ -441,13 +339,4 @@ The notebook also uses the untuned `xg_model` in some probability/SHAP steps whi
 - **Jupyter Notebook** — experimentation and documentation
 
 ---
-
-## Author
-
-**Your Name**
-
-Add your GitHub profile or LinkedIn URL here if you want to include contact links.
-
-## Disclaimer
-
-This project is intended for educational and portfolio purposes only. It is not financial advice and must not be used as a standalone system for real-world credit decisions.
+Made by Pramod Sharma
