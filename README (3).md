@@ -401,33 +401,10 @@ The notebook saves:
 - `credit_risk_model.pkl` — a sigmoid-calibrated model built from the tuned estimator.
 - `best_threshold.pkl` — a threshold value produced by the notebook's threshold-search section.
 
-**Important:** The current threshold-search cell has a formula error: it uses `2 * (precision - recall) / (precision + recall)` instead of the F1 formula `2 * precision * recall / (precision + recall)`. The recorded run selects a threshold of `1.00` and yields zero precision and recall for the default class in that threshold experiment. Fix the formula, use the tuned estimator consistently, and re-evaluate the threshold before relying on or deploying the saved threshold. The saved threshold in the current notebook should not be treated as validated.
 
-The notebook also uses the untuned `xg_model` in some probability/SHAP steps while other steps use the tuned estimator. Align these steps to the intended final model and rerun them before treating the artifacts and explanations as final.
 
-## Important Notes and Limitations
 
-- This is a portfolio project, not a production lending system.
-- The dataset's source, license, and provenance should be documented in the repository.
-- Cleaning rules should be justified with domain knowledge; unusual observations are not always invalid.
-- Model metrics depend on the dataset, split, class distribution, and threshold.
-- The classification threshold should reflect business costs and be selected without using the held-out test set for tuning.
-- Probability calibration should be assessed using suitable metrics and validation data.
-- Check for data leakage, stability over time, and performance on independent or out-of-time data.
-- Lending models require careful fairness, privacy, security, explainability, and regulatory review.
-- SHAP explanations describe model associations, not causation.
-- Do not use this model as the sole basis for real credit approval or rejection.
 
-## Future Improvements
-
-- Correct and validate the threshold optimization workflow.
-- Ensure evaluation, calibration, SHAP, and saved artifacts consistently use the selected tuned model.
-- Add precision-recall AUC, ROC-AUC on the held-out test set, calibration metrics, and threshold-specific confusion matrices.
-- Evaluate performance on an out-of-time test set and monitor for data drift.
-- Investigate fairness and error rates across relevant applicant subgroups, where legally and ethically appropriate.
-- Add automated tests and a reproducible training script.
-- Build a Streamlit application for input validation, risk estimates, and local explanations.
-- Add model versioning, logging, monitoring, and a documented retraining process.
 
 ## Technologies Used
 
@@ -442,12 +419,6 @@ The notebook also uses the untuned `xg_model` in some probability/SHAP steps whi
 
 ---
 
-## Author
+## LinkedIn
+https://www.linkedin.com/in/pramod-sharma-a8001a28b/?isSelfProfile=true
 
-**Your Name**
-
-Add your GitHub profile or LinkedIn URL here if you want to include contact links.
-
-## Disclaimer
-
-This project is intended for educational and portfolio purposes only. It is not financial advice and must not be used as a standalone system for real-world credit decisions.
