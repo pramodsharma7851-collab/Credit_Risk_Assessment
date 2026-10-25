@@ -1,3 +1,12 @@
+**Live link of the web_app** =https://credit-risk-assessment-epvt.onrender.com/
+# UI of the Application :
+<img width="1773" height="815" alt="image" src="https://github.com/user-attachments/assets/76d95f3d-dc8c-4b19-a097-261afd4f5469" />
+<img width="1604" height="845" alt="image" src="https://github.com/user-attachments/assets/a5195006-0e69-4173-ae39-9ec4e14e53c8" />
+<img width="1310" height="718" alt="image" src="https://github.com/user-attachments/assets/4502854f-955e-4d3b-8545-29ebfd63ce73" />
+
+
+
+
 # Explainable Credit Risk Assessment
 
 An end-to-end machine learning project that predicts loan default risk and explores how model predictions can be explained using SHAP (SHapley Additive exPlanations).
@@ -339,5 +348,5 @@ credit-risk-assessment/
 - **Jupyter Notebook** — experimentation and documentation
 
 ---
-Live link of the web_app = https://temporary-possess-tackle-renewal.trycloudflare.com/
-Made by Pramod Sharma
+- **Live link of the web_app** = https://temporary-possess-tackle-renewal.trycloudflare.com/
+- Made by Pramod Sharma
