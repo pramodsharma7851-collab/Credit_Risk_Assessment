@@ -348,5 +348,6 @@ credit-risk-assessment/
 - **Jupyter Notebook** — experimentation and documentation
 
 ---
-- **Live link of the web_app** = https://temporary-possess-tackle-renewal.trycloudflare.com/
+- **Live link of the web_app** = https://credit-risk-assessment-epvt.onrender.com/
+-  application is running on main.py  as a primary file
 - Made by Pramod Sharma
