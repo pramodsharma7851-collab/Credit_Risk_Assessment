@@ -339,4 +339,5 @@ credit-risk-assessment/
 - **Jupyter Notebook** — experimentation and documentation
 
 ---
+Live link of the web_app = https://temporary-possess-tackle-renewal.trycloudflare.com/
 Made by Pramod Sharma
