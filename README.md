@@ -39,7 +39,7 @@ Credit risk assessment helps lenders estimate whether a borrower may fail to rep
 - `0` — non-default
 - `1` — default
 
-The notebook develops and evaluates a Logistic Regression baseline and an XGBoost classifier. It also uses SHAP to investigate which input features influence predictions globally and for an individual applicant.
+The notebook develops and evaluates a Logistic Regression as a baseline, 10+ other models compared. And XGBoost classifier gives the optimal performance. It is then tuned for its hyperparameters using the Cross-Validation . And Finally calibrated model deployed. It also uses SHAP to investigate which input features influence predictions globally and for an individual applicant.
 
 The model output is an estimate based on the data used to train it; it is not a guarantee of whether a borrower will repay.
 
