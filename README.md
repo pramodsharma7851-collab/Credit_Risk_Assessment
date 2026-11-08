@@ -45,7 +45,7 @@ The model output is an estimate based on the data used to train it; it is not a 
 
 ## Business Problem
 
-Lenders need to identify potentially risky loans while avoiding unnecessarily classifying reliable borrowers as high risk. A model that predicts only the majority class can miss many default cases, so evaluation should consider precision, recall, F1-score, ROC-AUC, and the costs of different types of mistakes—not accuracy alone.
+Lenders need to identify potentially risky loans while avoiding unnecessarily classifying reliable borrowers as high risk. A model that predicts only the majority class can miss many default cases, so evaluation should consider precision, recall, F1-score, PR-AUC, and the costs of different types of mistakes—not accuracy alone.
 
 This project explores that problem using a binary classification approach.
 
@@ -53,9 +53,10 @@ This project explores that problem using a binary classification approach.
 
 - Explore and understand the credit-risk dataset.
 - Identify missing values, duplicates, unusual records, and class imbalance.
+- Then split in train and split before any type of preprocessing otherwise data leakage will be there.
 - Build reproducible preprocessing pipelines for numerical and categorical features.
 - Establish Logistic Regression as a baseline.
-- Train and tune XGBoost and compare its performance with the baseline.
+- Train and tune XGBoost and compare its performance with the baseline and Another 10+ Machine Learning Models.
 - Evaluate classification performance using multiple metrics.
 - Explore probability calibration and classification-threshold selection.
 - Explain model predictions using global and local SHAP visualizations.
